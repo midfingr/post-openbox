@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo pacman -S openbox oblogout obconf python2-xdg lxterminal lxpanel leafpad plokit-gnome gnome-keyring lxrandr lxpanel lxappearance-obconf networkmanager network-manager-applet firefox flashplugin lxdm cantarell-fonts xdg-user-dirs
 
 mkdir -p .config/openbox
