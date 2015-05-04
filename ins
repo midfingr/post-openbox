@@ -1,8 +1,18 @@
 #!/bin/bash
-sudo pacman -S openbox oblogout obconf python2-xdg lxterminal lxpanel leafpad plokit-gnome gnome-keyring lxrandr lxpanel lxappearance-obconf networkmanager network-manager-applet firefox flashplugin lxdm cantarell-fonts xdg-user-dirs dosfstools ntfs-3g gvfs gnome-themes-standard p7zip unzip zip unrar gtk-engine-murrine synapse wget xarchiver
+sudo pacman -S haveged
+sudo systemctl enable haveged
+sudo systemctl start haveged
+sudo pacman-key --init
+sudo pacman-key --populate archlinux
+sudo pacman -Syy
+
+sudo pacman -S openbox oblogout obconf python2-xdg lxterminal lxpanel leafpad plokit-gnome gnome-keyring lxrandr lxpanel lxappearance-obconf networkmanager network-manager-applet firefox flashplugin lxdm cantarell-fonts xdg-user-dirs dosfstools ntfs-3g gvfs gnome-themes-standard p7zip unzip zip unrar gtk-engine-murrine synapse wget xarchiver engine-aurora gnome-disk-utility --noconfirm
 
 mkdir -p .config/openbox
 cp -r /etc/xdg/openbox/* .config/openbox
+
+xdg-user-dirs-update
+sudo updatedb
 
 sudo systemctl enable NetworkManager
 sudo systemctl enable lxdm
