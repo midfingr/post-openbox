@@ -6,9 +6,9 @@ sudo pacman-key --init
 sudo pacman-key --populate archlinux
 sudo pacman -Syy
 
-sudo pacman -S openbox oblogout obconf python2-xdg lxterminal lxpanel leafpad polkit gnome-keyring lxrandr lxpanel lxappearance-obconf networkmanager network-manager-applet firefox flashplugin lxdm cantarell-fonts xdg-user-dirs dosfstools ntfs-3g gvfs gnome-themes-standard p7zip unzip zip unrar gtk-engine-murrine synapse wget xarchiver gtk-engine-aurora gnome-disk-utility --noconfirm
+sudo pacman -S openbox oblogout obconf python2-xdg lxterminal lxpanel leafpad polkit-gnome gnome-keyring lxrandr lxpanel lxappearance-obconf thunar networkmanager network-manager-applet firefox flashplugin lxdm cantarell-fonts xdg-user-dirs dosfstools ntfs-3g gvfs gnome-themes-standard p7zip unzip zip unrar gtk-engine-murrine synapse wget file-roller gtk-engine-aurora gnome-disk-utility xfdesktop xfce4-power-manager --noconfirm
 
-mkdir -p .config/openbox
+mkdir -p ~/.config/openbox
 cp -r /etc/xdg/openbox/* ~/.config/openbox
 
 xdg-user-dirs-update
